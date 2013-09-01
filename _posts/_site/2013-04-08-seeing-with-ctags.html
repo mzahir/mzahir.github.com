@@ -1,0 +1,39 @@
+<p>Within all hackery, the road to mastery usually leads you to the nitty gritty low-level implementation details of what you are trying to grasp. Even though there are many books on advanced material, they only get you so far before you find that they are either no longer up-to-date or they don&#8217;t cover a particular edge case that is imperative for you.</p>
+
+<h2 id='to_the_source_uhh'>To the source?! Uhh….</h2>
+
+<p>Despite the optimistic battle cry, reading the source code of a complex application/framework/language can be daunting, if not rather dry and immensely boring. Most of it isn&#8217;t intended to be read as a book and before you know it, you&#8217;re looking for the good parts. Just a specific portion that you&#8217;d like to understand instead of all that bloat in place to support stuff you don&#8217;t care about.</p>
+
+<p><img alt='Select' src='https://dl.dropboxusercontent.com/sh/2blavl2u4awrtxz/ywt90ML4OJ/honeybadger.png' /></p>
+
+<h2 id='ctags_to_the_rescue'>CTags to the rescue!</h2>
+
+<p>CTags will go through and create an index (or tag) file that allows you to search dynamically. I&#8217;m assuming that you&#8217;re using vim as your text editor - there are flavors for Emacs, etc. that may suite you better.</p>
+
+<h2 id='setup'>Setup</h2>
+
+<h4 id='installation'>Installation</h4>
+
+<p>The easiest way is through homebrew.</p>
+<div class='highlight'><pre><code class='bash'>brew install ctags
+</code></pre></div>
+<h4 id='configuration'>Configuration</h4>
+
+<p>Suppose you&#8217;re interested in rails. Grab a copy of the source</p>
+<div class='highlight'><pre><code class='bash'>git clone git://github.com/rails/rails.git
+</code></pre></div>
+<p>Now you want to have ctags index those files but since vim will look for the tags file in the current directory and keep searching one level above, let&#8217;s run this command from the user home (or the root directory that contains all of your rails projects)</p>
+<div class='highlight'><pre><code class='bash'><span class='nb'>cd</span> &lt;projects-root&gt;
+ctags -R ./path/to/rails/source
+</code></pre></div>
+<p>Add the following lines to your .vimrc file:</p>
+<div class='highlight'><pre><code class='bash'>filetype on
+<span class='nb'>set </span><span class='nv'>tags</span><span class='o'>=</span>tags;/
+</code></pre></div>
+<h3 id='use_the_source_your_name'>Use The Source, @your_name</h3>
+
+<p>Fire up a new shell and go over to any rails project. Over a rails method (for example, create_after), hit ctrl+] to see the definition in the source. You can toggle back to where you were before using ctrl+t. Pretty sweet, huh?</p>
+
+<p>There are additional shortcuts to listing matches, etc. that you can see for ctags either through the man pages or online.</p>
+
+<p>Blaze away and learn the underlying framework with ease, one method call at a time.</p>

@@ -1,0 +1,29 @@
+<h3 id='current_state_of_cmss'>Current State of CMSs</h3>
+
+<p>Most of the stuff on the internet that doesn&#8217;t involve transactions fits into a nice generic bucket: Content. Content that is provided by individuals (primarily on social networks and blogs) and then of course, media outlets and companies (primarily websites with supporting social media presence).</p>
+
+<p>The market for providing <a href='http://en.wikipedia.org/wiki/Content_management_system'>Content Management Systems</a> (CMS) is a competitive landscape that includes titans such as <a href='https://www.adobecqcloud.com/content/login.html'>Adobe</a> and <a href='https://www.adobecqcloud.com/content/login.html'>Oracle</a>. However, the market is big enough for a ton of players, especially for the SMBs (<a href='http://www.joomla.org/'>Joomla</a>, <a href='http://drupal.org/'>Drupal</a> and <a href='http://www.alfresco.com/'>Alfresco</a> to name a few…).</p>
+
+<p>Unfortunately, everybody does stuff differently and switching between systems is a nightmare for all.</p>
+
+<h3 id='standardize_the_chaos'>Standardize The Chaos!</h3>
+
+<p>Creating standards across all of these platforms would ease the data migration and alleviate vendor lock-in. There are two standards that have been developed to address these issues:</p>
+
+<ol>
+<li><a href='http://www.ibm.com/developerworks/library/j-jcr/'>Java Content Repository (JCR)</a> (based on <a href='http://jcp.org/en/jsr/detail?id=170'>JSR-170</a>) with <a href='http://jackrabbit.apache.org/'>Apache JackRabbit</a> as its reference implementation</li>
+
+<li><a href='https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis'>Content Management Interoperability Services</a> with <a href='http://chemistry.apache.org/java/opencmis.html'>Apache Chemistry</a> as its reference implementation</li>
+</ol>
+
+<p>JCR has been around for longer but wasn&#8217;t able to get the job done (partially due to politics within the steering committee and the spec&#8217;s tight coupling to a specific language: Java). CMIS addresses the issues better and aims to tackle the same issue of interoperability.</p>
+
+<h3 id='hurray_mission_accomplished'>Hurray! Mission Accomplished!</h3>
+
+<p>Not so fast! If you take a look at the <a href='http://en.wikipedia.org/wiki/Content_Management_Interoperability_Services'>CMIS adopters</a>, there are a lot of significant players with large market shares that are missing from the list.</p>
+
+<p>If they already have a loyal customer base, what value do they get by providing their customers an easy path to migrate off of their systems?</p>
+
+<p>I don&#8217;t see CMIS doing what it was meant to do, especially for the larger systems as there may be little incentive to adopt the standard and there is no cross-platform CMS governing body that can require and enforce all providers to adopt a standard.</p>
+
+<p>If anything, customers could be made aware of the specification as the gold standard for interoperability so that they look for it from the get-go instead of as a line item in a complex RFP where interoperability gets a sufficient score for a crappy SOAP service.</p>
